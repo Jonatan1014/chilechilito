@@ -9,16 +9,16 @@ services:
     container_name: chilechilito_web
     restart: always
     ports:
-      - "${WEB_PORT:-8080}:80"  # Acceder en http://localhost:8080
+      - "${WEB_PORT}"  # Acceder en http://localhost:8080
     volumes:
       - .:/var/www/html
     environment:
-      - DB_HOST=${DB_HOST:-localhost}
-      - DB_NAME=${DB_NAME:-chilechilito}
-      - DB_USER=${DB_USER:-root}
+      - DB_HOST=${DB_HOST}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
       - DB_PASS=${DB_PASS}
-      - APP_URL=${APP_URL:-http://localhost:8080}
-      - TZ=${TZ:-America/Santiago}
+      - APP_URL=${APP_URL}
+      - TZ=${TZ}
     env_file:
       - .env
     extra_hosts:

@@ -1,14 +1,14 @@
 <?php
 // Configuración de la base de datos
-define('DB_HOST', 'systemautomatic.xyz:3307');
+define('DB_HOST', 'localhost');
 define('DB_NAME', 'chile_chilito');
 define('DB_USER', 'root');
-define('DB_PASS', 'Balon100.');
+define('DB_PASS', '');
 define('DB_CHARSET', 'utf8mb4');
 
 // Configuración de la aplicación
 define('APP_NAME', 'Chile.Chilito - Sistema de Gestión');
-define('APP_URL', 'https://chilechilito.systemautomatic.xyz/chilechilito');
+define('APP_URL', 'http://localhost/chilechilito');
 define('BASE_PATH', dirname(dirname(__DIR__)));
 
 // Zona horaria
