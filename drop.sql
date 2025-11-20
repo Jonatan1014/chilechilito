@@ -1,0 +1,1 @@
+drop DATABASE IF EXISTS chile_chilito;
