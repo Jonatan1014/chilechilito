@@ -8,7 +8,7 @@ define('DB_CHARSET', 'utf8mb4');
 
 // Configuración de la aplicación
 define('APP_NAME', 'Chile.Chilito - Sistema de Gestión');
-define('APP_URL', 'http://localhost/chile_chilito');
+define('APP_URL', 'https://chilechilito.systemautomatic.xyz/chile_chilito');
 define('BASE_PATH', dirname(dirname(__DIR__)));
 
 // Zona horaria

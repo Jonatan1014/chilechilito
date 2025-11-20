@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # Servicio de Aplicación PHP + Apache
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: chilechilito_web
+    restart: always
+    ports:
+      - "${WEB_PORT:-8080}:80"  # Acceder en http://localhost:8080
+    volumes:
+      - .:/var/www/html
+    environment:
+      - DB_HOST=${DB_HOST:-localhost}
+      - DB_NAME=${DB_NAME:-chilechilito}
+      - DB_USER=${DB_USER:-root}
+      - DB_PASS=${DB_PASS}
+      - APP_URL=${APP_URL:-http://localhost:8080}
+      - TZ=${TZ:-America/Santiago}
+    env_file:
+      - .env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  # Permite acceder al MySQL del host
