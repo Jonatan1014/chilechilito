@@ -295,14 +295,13 @@ SELECT
     CONCAT(c.nombre, ' ', c.apellido) as nombre_completo,
     c.email,
     c.telefono,
-    c.tipo_cliente,
     MAX(v.fecha_venta) as ultima_compra,
     DATEDIFF(NOW(), MAX(v.fecha_venta)) as dias_inactivo,
     COUNT(v.id) as total_compras_historico
 FROM clientes c
 LEFT JOIN ventas v ON c.id = v.cliente_id AND v.estado = 'completada'
 WHERE c.estado = 'activo'
-GROUP BY c.id, c.nombre, c.apellido, c.email, c.telefono, c.tipo_cliente
+GROUP BY c.id, c.nombre, c.apellido, c.email, c.telefono
 HAVING dias_inactivo > 90 OR dias_inactivo IS NULL
 ORDER BY dias_inactivo DESC;
 

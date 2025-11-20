@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'chile_chilito');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', 'Balon100.');
 define('DB_CHARSET', 'utf8mb4');
 
 // Configuración de la aplicación
