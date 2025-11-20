@@ -9,7 +9,7 @@ include __DIR__ . '/../layouts/header.php';
         <div class="page-title-box">
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="/chile_chilito/public/index.php?controller=insumo">Insumos</a></li>
+                    <li class="breadcrumb-item"><a href="/chilechilito/public/index.php?controller=insumo">Insumos</a></li>
                     <li class="breadcrumb-item active">Editar Insumo</li>
                 </ol>
             </div>
@@ -31,7 +31,7 @@ include __DIR__ . '/../layouts/header.php';
                     Editando: <strong><?php echo htmlspecialchars($insumo['nombre']); ?></strong>
                 </div>
 
-                <form method="POST" action="/chile_chilito/public/index.php?controller=insumo&action=update" id="editInsumoForm">
+                <form method="POST" action="/chilechilito/public/index.php?controller=insumo&action=update" id="editInsumoForm">
                     <input type="hidden" name="id" value="<?php echo $insumo['id']; ?>">
                     
                     <!-- Información Básica -->
@@ -227,7 +227,7 @@ include __DIR__ . '/../layouts/header.php';
 
                     <!-- Botones de acción -->
                     <div class="text-end mt-4">
-                        <a href="/chile_chilito/public/index.php?controller=insumo&action=index" class="btn btn-light">
+                        <a href="/chilechilito/public/index.php?controller=insumo&action=index" class="btn btn-light">
                             <i class="ri-close-line"></i> Cancelar
                         </a>
                         <button type="submit" class="btn btn-primary">

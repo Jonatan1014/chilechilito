@@ -32,7 +32,7 @@ class ProductionController {
         
         if (!$produccion) {
             $_SESSION['error'] = 'Producción no encontrada';
-            header('Location: /chile_chilito/public/index.php?controller=production&action=index');
+            header('Location: /chilechilito/public/index.php?controller=production&action=index');
             exit();
         }
         
@@ -86,7 +86,7 @@ class ProductionController {
         AuthController::checkRole('supervisor');
         
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /chile_chilito/public/index.php?controller=production&action=index');
+            header('Location: /chilechilito/public/index.php?controller=production&action=index');
             exit();
         }
         
@@ -96,7 +96,7 @@ class ProductionController {
         
         if (!$producto_id || !$cantidad) {
             $_SESSION['error'] = 'Datos incompletos';
-            header('Location: /chile_chilito/public/index.php?controller=production&action=create');
+            header('Location: /chilechilito/public/index.php?controller=production&action=create');
             exit();
         }
         
@@ -104,10 +104,10 @@ class ProductionController {
         
         if ($resultado['success']) {
             $_SESSION['success'] = "Producción completada. $cantidad unidades producidas. Costo: $" . number_format($resultado['costo_produccion'], 2);
-            header('Location: /chile_chilito/public/index.php?controller=production&action=view&id=' . $resultado['produccion_id']);
+            header('Location: /chilechilito/public/index.php?controller=production&action=view&id=' . $resultado['produccion_id']);
         } else {
             $_SESSION['error'] = 'Error: ' . $resultado['error'];
-            header('Location: /chile_chilito/public/index.php?controller=production&action=create');
+            header('Location: /chilechilito/public/index.php?controller=production&action=create');
         }
         
         exit();

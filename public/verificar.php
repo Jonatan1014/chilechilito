@@ -232,7 +232,7 @@
                 echo '<div class="info">
                         <strong>💡 Solución:</strong><br>
                         1. Asegúrate de que MySQL esté corriendo en XAMPP<br>
-                        2. Verifica que la base de datos "chile_chilito" exista<br>
+                        2. Verifica que la base de datos "chilechilito" exista<br>
                         3. Importa el archivo database.sql en phpMyAdmin<br>
                         4. Verifica las credenciales en app/config/config.php
                       </div>';

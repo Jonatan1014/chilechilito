@@ -47,7 +47,7 @@ require_once $controllerFile;
 // Verificar autenticación (excepto para rutas públicas)
 if (!in_array($controller, $publicControllers) || !in_array($action, $publicActions)) {
     if (!isset($_SESSION['user_id'])) {
-        header('Location: /chile_chilito/public/index.php?controller=auth&action=showLogin');
+        header('Location: /chilechilito/public/index.php?controller=auth&action=showLogin');
         exit();
     }
 }

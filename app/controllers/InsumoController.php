@@ -52,7 +52,7 @@ class InsumoController {
         
         if (!$insumo) {
             $_SESSION['error'] = 'Insumo no encontrado';
-            header('Location: /chile_chilito/public/index.php?controller=insumo&action=index');
+            header('Location: /chilechilito/public/index.php?controller=insumo&action=index');
             exit();
         }
         
@@ -82,7 +82,7 @@ class InsumoController {
         AuthController::checkRole('supervisor');
         
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /chile_chilito/public/index.php?controller=insumo&action=index');
+            header('Location: /chilechilito/public/index.php?controller=insumo&action=index');
             exit();
         }
         
@@ -107,7 +107,7 @@ class InsumoController {
             $_SESSION['error'] = 'Error al crear el insumo';
         }
         
-        header('Location: /chile_chilito/public/index.php?controller=insumo&action=index');
+        header('Location: /chilechilito/public/index.php?controller=insumo&action=index');
         exit();
     }
     
@@ -122,7 +122,7 @@ class InsumoController {
         
         if (!$insumo) {
             $_SESSION['error'] = 'Insumo no encontrado';
-            header('Location: /chile_chilito/public/index.php?controller=insumo&action=index');
+            header('Location: /chilechilito/public/index.php?controller=insumo&action=index');
             exit();
         }
         
@@ -136,7 +136,7 @@ class InsumoController {
         AuthController::checkRole('supervisor');
         
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /chile_chilito/public/index.php?controller=insumo&action=index');
+            header('Location: /chilechilito/public/index.php?controller=insumo&action=index');
             exit();
         }
         
@@ -163,7 +163,7 @@ class InsumoController {
             $_SESSION['error'] = 'Error al actualizar el insumo';
         }
         
-        header('Location: /chile_chilito/public/index.php?controller=insumo&action=index');
+        header('Location: /chilechilito/public/index.php?controller=insumo&action=index');
         exit();
     }
     
@@ -181,7 +181,7 @@ class InsumoController {
             $_SESSION['error'] = 'Error al eliminar el insumo. Puede estar siendo usado en recetas.';
         }
         
-        header('Location: /chile_chilito/public/index.php?controller=insumo&action=index');
+        header('Location: /chilechilito/public/index.php?controller=insumo&action=index');
         exit();
     }
     
@@ -192,7 +192,7 @@ class InsumoController {
         AuthController::checkRole('supervisor');
         
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /chile_chilito/public/index.php?controller=insumo&action=necesidadesCompra');
+            header('Location: /chilechilito/public/index.php?controller=insumo&action=necesidadesCompra');
             exit();
         }
         
@@ -204,7 +204,7 @@ class InsumoController {
         
         if (!$insumo) {
             $_SESSION['error'] = 'Insumo no encontrado';
-            header('Location: /chile_chilito/public/index.php?controller=insumo&action=necesidadesCompra');
+            header('Location: /chilechilito/public/index.php?controller=insumo&action=necesidadesCompra');
             exit();
         }
         
@@ -223,7 +223,7 @@ class InsumoController {
         );
         
         $_SESSION['success'] = 'Compra registrada exitosamente';
-        header('Location: /chile_chilito/public/index.php?controller=insumo&action=view&id=' . $insumo_id);
+        header('Location: /chilechilito/public/index.php?controller=insumo&action=view&id=' . $insumo_id);
         exit();
     }
 }

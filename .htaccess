@@ -2,7 +2,7 @@
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /chile_chilito/
+    RewriteBase /chilechilito/
     
     # Redirigir todas las peticiones a public/index.php
     RewriteCond %{REQUEST_FILENAME} !-f

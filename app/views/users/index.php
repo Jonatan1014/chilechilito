@@ -3,7 +3,7 @@
 <div class="page-header">
     <h1><i class="fas fa-user-shield"></i> Gestión de Usuarios</h1>
     <div class="actions">
-        <a href="/chile_chilito/public/index.php?controller=auth&action=create" class="btn btn-primary">
+        <a href="/chilechilito/public/index.php?controller=auth&action=create" class="btn btn-primary">
             <i class="fas fa-user-plus"></i> Nuevo Usuario
         </a>
     </div>
@@ -45,11 +45,11 @@
                         </td>
                         <td><?php echo date('d/m/Y', strtotime($user['created_at'])); ?></td>
                         <td class="actions-cell">
-                            <a href="/chile_chilito/public/index.php?controller=auth&action=edit&id=<?php echo $user['id']; ?>" class="btn btn-sm btn-warning" title="Editar">
+                            <a href="/chilechilito/public/index.php?controller=auth&action=edit&id=<?php echo $user['id']; ?>" class="btn btn-sm btn-warning" title="Editar">
                                 <i class="fas fa-edit"></i>
                             </a>
                             <?php if ($user['id'] != $_SESSION['user_id']): ?>
-                            <a href="/chile_chilito/public/index.php?controller=auth&action=delete&id=<?php echo $user['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar este usuario?')" title="Eliminar">
+                            <a href="/chilechilito/public/index.php?controller=auth&action=delete&id=<?php echo $user['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar este usuario?')" title="Eliminar">
                                 <i class="fas fa-trash"></i>
                             </a>
                             <?php endif; ?>

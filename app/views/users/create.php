@@ -3,7 +3,7 @@
 <div class="page-header">
     <h1><i class="fas fa-user-plus"></i> Crear Usuario</h1>
     <div class="actions">
-        <a href="/chile_chilito/public/index.php?controller=auth&action=index" class="btn btn-secondary">
+        <a href="/chilechilito/public/index.php?controller=auth&action=index" class="btn btn-secondary">
             <i class="fas fa-arrow-left"></i> Volver
         </a>
     </div>
@@ -14,7 +14,7 @@
         <h2>Nuevo Usuario</h2>
     </div>
     <div class="card-body">
-        <form method="POST" action="/chile_chilito/public/index.php?controller=auth&action=store">
+        <form method="POST" action="/chilechilito/public/index.php?controller=auth&action=store">
             <div class="form-grid">
                 <div class="form-group">
                     <label for="username">Nombre de Usuario *</label>

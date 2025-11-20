@@ -14,7 +14,7 @@ $stockBajo = $insumo['stock_actual'] <= $insumo['stock_minimo'];
         <div class="page-title-box">
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="/chile_chilito/public/index.php?controller=insumo">Insumos</a></li>
+                    <li class="breadcrumb-item"><a href="/chilechilito/public/index.php?controller=insumo">Insumos</a></li>
                     <li class="breadcrumb-item active"><?php echo htmlspecialchars($insumo['nombre']); ?></li>
                 </ol>
             </div>
@@ -48,12 +48,12 @@ $stockBajo = $insumo['stock_actual'] <= $insumo['stock_minimo'];
                     </div>
                 </div>
                 <div>
-                    <a href="/chile_chilito/public/index.php?controller=insumo&action=index" 
+                    <a href="/chilechilito/public/index.php?controller=insumo&action=index" 
                        class="btn btn-light me-2">
                         <i class="ri-arrow-left-line"></i> Volver
                     </a>
                     <?php if ($_SESSION['role'] !== 'vendedor'): ?>
-                    <a href="/chile_chilito/public/index.php?controller=insumo&action=edit&id=<?php echo $insumo['id']; ?>" 
+                    <a href="/chilechilito/public/index.php?controller=insumo&action=edit&id=<?php echo $insumo['id']; ?>" 
                        class="btn btn-warning">
                         <i class="ri-edit-line"></i> Editar
                     </a>

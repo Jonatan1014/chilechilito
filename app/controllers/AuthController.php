@@ -15,7 +15,7 @@ class AuthController {
     public function showLogin() {
         // Si ya está autenticado, redirigir al dashboard
         if (isset($_SESSION['user_id'])) {
-            header('Location: /chile_chilito/public/index.php?controller=dashboard&action=index');
+            header('Location: /chilechilito/public/index.php?controller=dashboard&action=index');
             exit();
         }
         
@@ -27,7 +27,7 @@ class AuthController {
      */
     public function login() {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /chile_chilito/public/index.php?controller=auth&action=showLogin');
+            header('Location: /chilechilito/public/index.php?controller=auth&action=showLogin');
             exit();
         }
         
@@ -36,7 +36,7 @@ class AuthController {
         
         if (empty($username) || empty($password)) {
             $_SESSION['error'] = 'Usuario y contraseña son requeridos';
-            header('Location: /chile_chilito/public/index.php?controller=auth&action=showLogin');
+            header('Location: /chilechilito/public/index.php?controller=auth&action=showLogin');
             exit();
         }
         
@@ -50,11 +50,11 @@ class AuthController {
             $_SESSION['role'] = $user['role'];
             $_SESSION['success'] = '¡Bienvenido ' . $user['username'] . '!';
             
-            header('Location: /chile_chilito/public/index.php?controller=dashboard&action=index');
+            header('Location: /chilechilito/public/index.php?controller=dashboard&action=index');
             exit();
         } else {
             $_SESSION['error'] = 'Usuario o contraseña incorrectos';
-            header('Location: /chile_chilito/public/index.php?controller=auth&action=showLogin');
+            header('Location: /chilechilito/public/index.php?controller=auth&action=showLogin');
             exit();
         }
     }
@@ -64,7 +64,7 @@ class AuthController {
      */
     public function logout() {
         session_destroy();
-        header('Location: /chile_chilito/public/index.php?controller=auth&action=showLogin');
+        header('Location: /chilechilito/public/index.php?controller=auth&action=showLogin');
         exit();
     }
     
@@ -73,7 +73,7 @@ class AuthController {
      */
     public static function checkAuth() {
         if (!isset($_SESSION['user_id'])) {
-            header('Location: /chile_chilito/public/index.php?controller=auth&action=showLogin');
+            header('Location: /chilechilito/public/index.php?controller=auth&action=showLogin');
             exit();
         }
     }
@@ -90,7 +90,7 @@ class AuthController {
         
         if ($user_role_level < $required_role_level) {
             $_SESSION['error'] = 'No tienes permisos para acceder a esta sección';
-            header('Location: /chile_chilito/public/index.php?controller=dashboard&action=index');
+            header('Location: /chilechilito/public/index.php?controller=dashboard&action=index');
             exit();
         }
     }
@@ -120,7 +120,7 @@ class AuthController {
         self::checkRole('admin');
         
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /chile_chilito/public/index.php?controller=auth&action=index');
+            header('Location: /chilechilito/public/index.php?controller=auth&action=index');
             exit();
         }
         
@@ -158,7 +158,7 @@ class AuthController {
         
         if (!empty($errors)) {
             $_SESSION['error'] = implode('<br>', $errors);
-            header('Location: /chile_chilito/public/index.php?controller=auth&action=create');
+            header('Location: /chilechilito/public/index.php?controller=auth&action=create');
             exit();
         }
         
@@ -176,7 +176,7 @@ class AuthController {
             $_SESSION['error'] = 'Error al crear el usuario';
         }
         
-        header('Location: /chile_chilito/public/index.php?controller=auth&action=index');
+        header('Location: /chilechilito/public/index.php?controller=auth&action=index');
         exit();
     }
     
@@ -191,7 +191,7 @@ class AuthController {
         
         if (!$user) {
             $_SESSION['error'] = 'Usuario no encontrado';
-            header('Location: /chile_chilito/public/index.php?controller=auth&action=index');
+            header('Location: /chilechilito/public/index.php?controller=auth&action=index');
             exit();
         }
         
@@ -205,7 +205,7 @@ class AuthController {
         self::checkRole('admin');
         
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /chile_chilito/public/index.php?controller=auth&action=index');
+            header('Location: /chilechilito/public/index.php?controller=auth&action=index');
             exit();
         }
         
@@ -243,7 +243,7 @@ class AuthController {
         
         if (!empty($errors)) {
             $_SESSION['error'] = implode('<br>', $errors);
-            header('Location: /chile_chilito/public/index.php?controller=auth&action=edit&id=' . $id);
+            header('Location: /chilechilito/public/index.php?controller=auth&action=edit&id=' . $id);
             exit();
         }
         
@@ -261,7 +261,7 @@ class AuthController {
             $_SESSION['error'] = 'Error al actualizar el usuario';
         }
         
-        header('Location: /chile_chilito/public/index.php?controller=auth&action=index');
+        header('Location: /chilechilito/public/index.php?controller=auth&action=index');
         exit();
     }
     
@@ -276,7 +276,7 @@ class AuthController {
         // No permitir eliminar al usuario autenticado
         if ($id == $_SESSION['user_id']) {
             $_SESSION['error'] = 'No puedes eliminarte a ti mismo';
-            header('Location: /chile_chilito/public/index.php?controller=auth&action=index');
+            header('Location: /chilechilito/public/index.php?controller=auth&action=index');
             exit();
         }
         
@@ -286,7 +286,7 @@ class AuthController {
             $_SESSION['error'] = 'Error al eliminar el usuario';
         }
         
-        header('Location: /chile_chilito/public/index.php?controller=auth&action=index');
+        header('Location: /chilechilito/public/index.php?controller=auth&action=index');
         exit();
     }
 }

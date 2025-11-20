@@ -10,17 +10,17 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Configuración de zona horaria
-date_default_timezone_set('America/Santiago');
+date_default_timezone_set('America/Bogota');
 
 // Configuración de sesión
 ini_set('session.gc_maxlifetime', 3600);
 session_start();
 
 // Configuración de Base de Datos (desde variables de entorno Docker)
-define('DB_HOST', getenv('DB_HOST') ?: 'db');
+define('DB_HOST', getenv('DB_HOST') ?: 'systemautomatic.xyz:3307');
 define('DB_NAME', getenv('DB_NAME') ?: 'chile_chilito');
-define('DB_USER', getenv('DB_USER') ?: 'chilechilito_user');
-define('DB_PASS', getenv('DB_PASS') ?: 'chilechilito_pass');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: 'Balon100.');
 define('DB_CHARSET', 'utf8mb4');
 
 // URL Base de la Aplicación
