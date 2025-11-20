@@ -1,6 +1,6 @@
 <?php
 // Configuración de la base de datos
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'systemautomatic.xyz:3307');
 define('DB_NAME', 'chile_chilito');
 define('DB_USER', 'root');
 define('DB_PASS', 'Balon100.');
